@@ -1,0 +1,77 @@
+.board {
+  display: flex;
+  padding: 25px;
+}
+.col {
+  flex: 1;
+  margin-left: 25px;
+}
+
+.col:first-child {
+  flex: 1;
+  margin-left: 0;
+}
+
+.col:first-child .btn-left, .col:last-child .btn-right {
+  visibility: hidden;
+}
+
+.btn-right {
+  float: right;
+}
+
+.btn-left {
+  float: left;
+}
+
+.btn-left, .btn-right {
+  color: #bbb;
+  outline: none;
+  font-size: large;
+}
+.btn-left:hover, .btn-right:hover {
+  color: darkblue;
+}
+.col header {
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+.col ul {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 5px;
+  box-sizing: border-box;
+  background: #efefef;
+  margin-top: 5px;
+  color: #666;
+  display: flex;
+}
+
+li span {
+  color: #333;
+  flex: 1
+}
+
+li button {
+  border: none;
+  background: none;
+}
+.btn-add {
+  color: #aaa;
+  background: none;
+  border: none;
+  font-size: 13px;
+  float: right;
+  margin: 10px 0 0 0;
+  outline: none;
+}
+
+
+
