@@ -1,5 +1,5 @@
 Kanban board example inspired by trello
 
-(screenshot.jpg)
+![](https://github.com/stumnee/kanban-react/blob/master/screenshot.png?raw=true)
 
 
