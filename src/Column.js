@@ -2,14 +2,15 @@ import React from "react";
 
 export default class Welcome extends React.Component {
     addCard() {
-        let card = window.prompt("Card name");
+        let card = window.prompt("Enter a card");
         if (!!card) {
             const {label, cards} = this.props;
             cards.push(card);
             this.setState({
                 cards: cards,
                 label: label
-            })
+            });
+            this.props.saveData()
         }
     }
     render() {

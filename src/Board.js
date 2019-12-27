@@ -6,8 +6,13 @@ export default class Board extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {data: data};
+        let fromLocalStorage = localStorage.getItem('cards');
+        this.state = {data: fromLocalStorage ? JSON.parse(fromLocalStorage) : data};
     }
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        this.saveData()
+    }
+
     moveCard(card, src, dest) {
         const data = this.state.data;
 
@@ -17,11 +22,16 @@ export default class Board extends React.Component {
         this.setState({data: data})
     }
 
+    saveData() {
+        localStorage.setItem('cards', JSON.stringify(this.state.data));
+    }
+
     render() {
         const columns = this.state.data.map((item, idx) =>
             <Column key={idx}
                     idx={idx}
                     moveCard={this.moveCard.bind(this)}
+                    saveData={this.saveData.bind(this)}
                     label={item.label}
                     color={item.headerColor}
                     cards={item.cards}>

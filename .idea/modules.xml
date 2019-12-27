@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/trello.iml" filepath="$PROJECT_DIR$/trello.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kanban-react.iml" filepath="$PROJECT_DIR$/kanban-react.iml" />
     </modules>
   </component>
 </project>
